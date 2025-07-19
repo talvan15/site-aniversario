@@ -1,0 +1,93 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/public/background.jpg'), linear-gradient(to bottom right, rgba(41, 40, 40, 0.7), rgba(110, 103, 103, 0.9));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #ff99c8;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.foto {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.carta {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px dashed #ff99c8;
+  border-radius: 15px;
+  padding: 1.5rem;
+  font-style: italic;
+  max-width: 500px;
+  animation: fadeIn 2s ease-in;
+}
+
+.coracoes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.coraçao {
+  position: absolute;
+  font-size: 2rem;
+  animation: subir 6s linear infinite;
+  opacity: 0.7;
+  color: #ff99c8;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
